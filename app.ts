@@ -1,10 +1,16 @@
-const add = (n1: number, n2: number) => {
-    return n1 + n2;
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput = 'Max';
+// userName = userInput;
+
+if (typeof userInput === 'string') {
+    userName = userInput;
 };
 
-const number1 = 12;
-const number2 = 54;
+const generateError = (message: string, code: number) => {
+    throw {message: message, errorCode: code}
+};
 
-const result = add(number1, number2);
-
-console.log(result);
+generateError('An error occurred!', 500);

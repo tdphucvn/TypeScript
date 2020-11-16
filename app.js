@@ -1,7 +1,13 @@
-var add = function (n1, n2) {
-    return n1 + n2;
+var userInput;
+var userName;
+userInput = 5;
+userInput = 'Max';
+// userName = userInput;
+if (typeof userInput === 'string') {
+    userName = userInput;
+}
+;
+var generateError = function (message, code) {
+    throw { message: message, errorCode: code };
 };
-var number1 = 12;
-var number2 = 54;
-var result = add(number1, number2);
-console.log(result);
+generateError('An error occurred!', 500);
